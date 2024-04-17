@@ -1,0 +1,91 @@
+.wrapper
+{
+    display: flex;
+    min-width: 110px;
+    max-width: 110px;
+    height: 100vh;
+    background-color: #1b2b59;
+    position: absolute;
+    z-index: 10;
+}
+
+.logo_img
+{
+    width: 100px;
+    height: 110px;
+}
+
+.side_menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.butons {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 35px;
+    position: fixed;
+}
+
+button.profile_btn,
+button.setting_btn,
+button.schedule_btn,
+button.chat_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+button.profile_btn span,
+button.setting_btn span,
+button.schedule_btn span,
+button.chat_btn span 
+{
+    display: none;
+}
+
+.profile_img,
+.setting_img,
+.schedule_img,
+.chat_img
+{
+    width: 20px;
+    height: 20px;
+}
+
+button.profile_btn:hover,
+button.schedule_btn:hover
+{
+    width: 100px;
+    transition: width 0.5s ease-in-out;
+}
+
+button.setting_btn:hover,
+button.chat_btn:hover 
+{
+    width: 140px;
+    transition: width 0.5s ease-in-out;
+}
+
+button.profile_btn:hover span,
+button.schedule_btn:hover span,
+button.setting_btn:hover span,
+button.chat_btn:hover span {
+    display: flex;
+    margin-left: 10px;
+}
+
+@media screen and (max-width:331px) {
+    .wrapper{
+        height: 100%;
+    }
+}

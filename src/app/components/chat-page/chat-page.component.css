@@ -1,0 +1,412 @@
+.chat_page_wrapper
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    background-color: azure;
+    overflow: hidden;
+}
+
+.chat_container
+{
+    display: flex;
+    flex-direction: row;
+    padding-left: 110px;
+    width: 100%;
+}
+
+.theme_search_container
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.search
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.chat_search
+{
+    width: 300px;
+    border-radius: 5px;
+    height: 20px;
+    outline: none;
+    border: 1px solid gray;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.recent_chats
+{
+    width: 40%;
+    height: 100vh;
+    background-color: rgb(241, 238, 238);
+    position: relative;
+    flex-direction: column;
+}
+
+.burger_menu
+{
+    display: none;
+    position: absolute;
+    z-index: 1000;
+}
+
+.show_chats_btn
+{
+    background-color: none;
+    border: none;
+    background: none;
+}
+
+.list_of_chats
+{
+    overflow-y: auto;
+    max-height: 450px;
+    overflow-x: hidden;
+}
+
+.selected_chat{
+    width:60%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.theme
+{
+    padding: 0px 0px 0px 50px;
+    font-size:30px;
+    font-weight: 600;
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 370px;
+    list-style: none;
+    margin-bottom: 20px;
+    align-items: center;
+    padding-left: 15px;
+}
+
+li:hover{
+    background-color: rgb(173, 170, 170);
+    border-radius: 10px;
+}
+
+img.avatar
+{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.chat_info
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.name_message
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    gap: 5px;
+    padding-right: 15px;
+}
+
+.user_name
+{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.message
+{
+    font-size: 15px;
+    font-weight: 700;
+    color: gray;
+    opacity: 0.8;
+}
+  
+.list_of_chats::-webkit-scrollbar {
+    width: 5px;
+    opacity: 0;
+}
+  
+.list_of_chats::-webkit-scrollbar-thumb {
+    background-color: #0a0a0a;
+    border-radius: 10px;
+    opacity: 0;
+}
+  
+.list_of_chats::-webkit-scrollbar-thumb {
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.head_of_chat
+{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px black solid;
+}
+
+.avatar_name
+{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    gap: 30px;
+}
+
+img.user_avatar_chat {
+    width: 60px;
+}
+
+.input_messsage
+{
+    display: flex;
+    width: 500px;
+    background-color: aqua;
+}
+
+.message_block {
+    margin-top: 15px;
+    padding-left: 20px;
+    margin-right: 40px;
+    width: 90%;
+    display: flex;
+    min-height: 380px;
+    max-height: 380px;
+    flex-direction: column-reverse;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 25px;
+}
+
+.user_message {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.teacher_message
+{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.text_teacher,
+.text_user {
+    display: flex;
+    color: white;
+    background-color: blue;
+    height: 35px;
+    padding: 10px;
+    align-items: center;
+}
+
+.teacher_message::before
+{
+    content: " ";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent blue;
+}
+
+.user_message::after
+{
+    content: " ";
+    position: relative;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 0px 10px 10px;
+    border-color: transparent blue;
+}
+
+.text_input
+{
+    display: flex;
+    max-width: 500px;
+    width: 500px;
+    bottom: 35px;
+    margin-left: 25px;
+}
+
+.message_input{
+    height: 30px;
+    max-width: 500px;
+    width: 500px;
+    border-radius: 5px;
+    background-color: rgb(196, 202, 196);
+    border: 1px solid black;
+    outline: none;
+    padding-left: 15px;
+}
+
+.text_input #send_btn{
+    display: flex;
+    visibility:visible;
+    border: none;
+    background: none;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#message_input:not(:placeholder-shown) ~ #send_btn{
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.send
+{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.send_file_btn
+{
+    width: 30px;
+    height: 20px;
+    background: none;
+    border: none;
+}
+
+.file_sender
+{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    left: 490px;
+    top: 400px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1010px) {
+    .recent_chats{
+        width: 30%;
+    }
+    .selected_chat{
+        width: 70%;
+    }
+
+    .message_block{
+        width: 75%;
+    }
+
+    .message_input{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .burger_menu {
+        display: flex;
+    }
+
+    .recent_chats
+    {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .selected_chat{
+        width: 100%;
+    }
+
+    .message_block{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:632px) {
+    .message_block{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:558px) {
+    .selected_chat{
+        width: 90%;
+    }
+
+    .message_input{
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 461px) {
+    .selected_chat{
+        width: 90%;
+    }
+
+    .message_block
+    {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .selected_chat{
+        width: 90%;
+    }
+
+    .message_block
+    {
+        width: 60%;
+    }
+
+    .message_input{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:355px) {
+    .selected_chat{
+        width: 90%;
+    }
+
+    .message_block
+    {
+        width: 50%;
+    }
+
+    .message_input{
+        width: 125px;
+    }
+
+    .avatar_name
+    {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,112 @@
+
+@import 'src/app/parts/search-bar/search-bar.component.css';
+@import 'src/app/parts/side-menu/side-menu.component.css';
+
+
+.schedule_page_wrapper {
+    display: flex;
+    background-color: aliceblue;
+}
+
+.schedule_container_wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    padding: 15px 0px 0px 100px;
+}
+
+.page_theme {
+    text-align: left;
+    padding-left: 50px;
+    height: 60px;
+}
+
+.schedule_table_container {
+    display: flex;
+    justify-content: center;
+}
+
+table.schedule_table {
+    gap: 5px;
+    border-spacing: 5px;
+    border-collapse: separate;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    width: 90%;
+  }
+
+.no_display
+{
+    visibility: hidden;
+    border: none;
+    background: none;
+}
+
+th, td { 
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+.day_of_week{
+    margin-left: 5px;
+    color: black;
+}
+
+td {
+    background-color: rgb(189, 183, 183);
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    white-space: pre-line;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-size: x-small;
+}
+
+.num_of_lesson{
+    color: black;
+    margin-bottom: 10px;
+}
+
+th{
+    border: none;
+    border-radius: 10px;
+}
+
+.schedule_table_container_responsive
+{
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    .schedule_page_wrapper{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .schedule_table_container
+    {
+        display: none;
+    }
+
+    .day_schedule
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    .schedule_table_container_responsive
+    {
+        display: block;
+    }
+
+    .table.schedule_table_responsive{
+        background-color: white;
+    }
+}

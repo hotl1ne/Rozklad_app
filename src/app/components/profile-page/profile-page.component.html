@@ -1,0 +1,33 @@
+<div class="page_wrapper">
+    <app-side-menu></app-side-menu>
+    <div class="profile_container">
+        <app-search-bar></app-search-bar>
+        <div class="theme">
+            <h1>Ваш профіль</h1>
+        </div>
+        <div class="profile_info">
+            <div class="contacts">
+                <input type="file" (change)="onFileSelected($event)" id = "image">
+                <label for="image" id ="label">📎</label>
+                <div class="image">
+                    <img *ngIf="imageURL" [src]="imageURL" alt="avatar" class="profile_img">
+                </div>
+                <div class="name">
+                    <span class = "name">{{user.name}}</span>
+                </div>
+                <div class="mail_phone">
+                    <span class = "cont">Телефон: {{user.phone}}</span>
+                    <span class = "cont">Пошта: {{user.login}}</span>
+                </div>
+            </div>
+            <div class="study_info">
+                <div class="info">
+                    <p class="faculty">Факультет: {{user.faculty}}</p>
+                    <p class="coure">Курс: {{user.course}}</p>
+                    <p class="group">Група: {{user.group}}</p>
+                    <p class="kaf">Кафедра: {{user.cafedra}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

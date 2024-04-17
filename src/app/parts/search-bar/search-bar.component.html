@@ -1,0 +1,14 @@
+
+<header>
+    <div>
+        <input type="text" placeholder="Пошук викладача..." [(ngModel)]="searchQuery" (input)="onInputChange()">
+    </div>
+    <div class = "search_Results" *ngIf="searchResults.length > 0 && searchQuery.trim() !== ''">
+        <h2>Результати пошуку:</h2>
+        <ul>
+          <li *ngFor="let teacher of searchResults">
+            <a href="{{ teacher.link }}" target="_blank">{{ teacher.name }}</a>
+          </li>
+        </ul>
+      </div>
+</header>

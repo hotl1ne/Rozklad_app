@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <div class="left_block">
+        <div class="uni_name">
+            <h1>Львівський національний університет імені Івана Франка
+            </h1>
+        </div>
+        <div class="faculty_name">
+            <p>Факультет електроніки та комп'ютерних технологій</p>
+        </div>
+        <div class="welcome_text">
+            <p>Вітаємо! Будь ласка, увідійдіть до свого аккаунту</p>
+        </div>
+        <form class="login">
+            <div class="login_inputs">
+                <input type="text" class="login" placeholder="Логін" name="username" [(ngModel)]="username">
+                <input type="password" class="login" placeholder="Пароль" name="password" [(ngModel)]="password">
+            </div>
+            <div class="button" (click)="login()">
+                <button class="login" type="button" id="submitButton">Увійти</button>
+            </div>
+        </form>           
+    </div>
+    <div class="right_block">
+        <img src="assets\Герб_ФЕКТ.jpg" alt="герб" class="logo">
+    </div>
+</div>

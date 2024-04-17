@@ -1,0 +1,166 @@
+<div class="schedule_page_wrapper">
+    <app-side-menu></app-side-menu>
+    <div class="schedule_container_wrapper">
+        <div class="page_theme">
+            <h1>Розклад</h1>
+        </div>
+        <div class="schedule_table_container">
+            <table class="schedule_table">
+                <thead>
+                    <tr>
+                        <th class = "no_display"></th>
+                        <th class = "num_of_lesson">1</th>
+                        <th class = "num_of_lesson">2</th>
+                        <th class = "num_of_lesson">3</th>
+                        <th class = "num_of_lesson">4</th>
+                        <th class = "num_of_lesson">5</th>
+                        <th class = "num_of_lesson">6</th>
+                        <th class = "num_of_lesson">7</th>
+                        <th class = "num_of_lesson">8</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class = "day_of_week">Пн</th>
+                       <td *ngFor="let subject of schedule.monday.subject">
+                            <p class = "schedule_text">
+                                {{subject}}
+                            </p>  
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class = "day_of_week">Вт</th>
+                        <td *ngFor="let subject of schedule.tuesday.subject">
+                            <p class = "schedule_text">
+                                {{subject}}
+                            </p>  
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <th class = "day_of_week">Ср</th>
+                        <td *ngFor="let subject of schedule.wednesday.subject">
+                            <p class = "schedule_text">
+                                {{subject}}
+                            </p>  
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <th class = "day_of_week">Чт</th>
+                        <td *ngFor="let subject of schedule.thursday.subject">
+                            <p class = "schedule_text">
+                                {{subject}}
+                            </p>  
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class = "day_of_week">Пт</th>
+                        <td *ngFor="let subject of schedule.friday.subject">
+                            <p class = "schedule_text">
+                                {{subject}}
+                            </p>  
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="schedule_table_container_responsive">
+            <div class="day_schedule">
+                <table class="schedule_table_responsive">
+                    <thead>
+                        <tr>
+                            <th class = "day">Понеділок</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let subject of schedule.monday.subject; let i = index">
+                            <th>{{i+1}}</th>
+                            <td>
+                                <p class = "schedule_text">
+                                    {{subject}}
+                                </p>  
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="day_schedule">
+                <table class="schedule_table_responsive">
+                    <thead>
+                        <tr>
+                            <th class = "day">Вівторок</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let subject of schedule.tuesday.subject; let i = index">
+                            <th>{{i+1}}</th>
+                            <td>
+                                <p class = "schedule_text">
+                                    {{subject}}
+                                </p>  
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="day_schedule">
+                <table class="schedule_table_responsive">
+                    <thead>
+                        <tr>
+                            <th class = "day">Середа</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let subject of schedule.wednesday.subject; let i = index">
+                            <th>{{i+1}}</th>
+                            <td>
+                                <p class = "schedule_text">
+                                    {{subject}}
+                                </p>  
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="day_schedule">
+                <table class="schedule_table_responsive">
+                    <thead>
+                        <tr>
+                            <th class = "day">Четвер</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let subject of schedule.thursday.subject; let i = index">
+                            <th>{{i+1}}</th>
+                            <td>
+                                <p class = "schedule_text">
+                                    {{subject}}
+                                </p>  
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="day_schedule">
+                <table class="schedule_table_responsive">
+                    <thead>
+                        <tr>
+                            <th class = "day">П'ятниця</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let subject of schedule.friday.subject; let i = index">
+                            <th>{{i+1}}</th>
+                            <td>
+                                <p class = "schedule_text">
+                                    {{subject}}
+                                </p>  
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

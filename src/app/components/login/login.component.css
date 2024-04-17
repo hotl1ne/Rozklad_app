@@ -1,0 +1,130 @@
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left_block
+{
+    display: block;
+    width: 50%;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.uni_name {
+    display: flex;
+    justify-content: center;
+    color: darkblue;
+    font-family: system-ui;
+    font-size: x-small;
+    padding: 20px;
+    text-align: center;
+}
+
+.faculty_name {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    color: darkblue;
+    font-family: system-ui;
+    font-size: larger;
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome_text {
+    display: flex;
+    justify-content: center;
+    color: gray;
+    padding: 20px;
+    text-align: center;
+}
+
+form.login {
+    display: flex;
+    height: 150px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input.login {
+    height: 30px;
+    width: 200px;
+    margin-bottom: 15px;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: white;
+    box-sizing: border-box;
+    transition: border-color 1s ease;
+}
+
+input.login:focus {
+    border: 1px blue solid;
+}
+
+input.login:hover {
+    border: 2px blue solid;
+}
+
+
+input.login::placeholder
+{
+    padding-left: 20px;
+}
+
+.login_inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+button#submitButton {
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    width: 180px;
+    height: 30px;
+    font-family: system-ui;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+button#submitButton:hover {
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    width: 180px;
+    height: 30px;
+    font-family: system-ui;
+    opacity: 0.5;
+}
+
+.right_block
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+}
+
+img.logo {
+    width: 200px;
+    height: 220px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .left_block{
+        width: 100%;
+    }
+
+    .right_block{
+        display: none;
+    }
+}

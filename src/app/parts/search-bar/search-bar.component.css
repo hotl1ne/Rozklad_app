@@ -1,0 +1,31 @@
+
+header
+{
+    top: 40px;
+    position: static;
+}
+
+input
+{
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 200px;
+    height: 20px;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.search_Results
+{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    position: absolute;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 344px) {
+    input{
+        width: 150px;
+    }
+}

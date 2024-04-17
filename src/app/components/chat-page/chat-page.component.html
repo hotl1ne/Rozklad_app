@@ -1,0 +1,63 @@
+<div class="chat_page_wrapper">
+    <app-side-menu></app-side-menu>
+    <div class="chat_container">
+        <div class="burger_menu">
+            <button class="show_chats_btn" (click)="toggleRecentChats()">➔</button>
+        </div>        
+        <div class="recent_chats" id = "recent_chats">
+           <div class="theme_search_container">
+                <div class="theme">
+                    <span>Чати</span>
+                </div>
+                <div class="search">
+                    <input class = "chat_search" type="text" placeholder="Пошук в чатах...">
+                </div>
+           </div>
+            <div class="list_of_chats">
+                <ul class = "chat_list">
+                    <li class = "chat" *ngFor="let chats of chat.chats; let i = index;" (click) = "select_Chat(i)">
+                        <div class="chat_info">
+                            <div class="avatar">
+                                <img src="assets\profile.png" alt="avatar" class="avatar">
+                            </div>
+                            <div class="name_message">
+                                <span class = "user_name">{{chats}}</span>
+                                <span class = "message">{{chat.toUserMessage[i]}}</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="selected_chat" *ngFor="let select of selectedChat.chats">
+            <div class="head_of_chat">
+                <div class="avatar_name">
+                    <div class="user_avatar">
+                        <img src="assets\profile.png" alt="avatar" class="user_avatar_chat">
+                    </div>
+                    <div class="user_name_chat">
+                        <span>{{select}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="message_block">
+                <div *ngFor="let message of messages" [ngClass]="message.type" class = "user_message">
+                    <div class="text_user">
+                        <span>{{ message.text }}</span>
+                    </div>
+                </div>
+                <div class="teacher_message" *ngFor="let messages of selectedChat.toUserMessage">
+                    <div class="text_teacher">
+                        <span>{{messages}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text_input">
+                <input class = "message_input" id ="message_input" type="text" placeholder="Введіть повідомлення...">
+                <button id ="send_btn" (click)="sendMessage()">
+                    <img src="assets\send.svg" alt="send" class="send">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
